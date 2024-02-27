@@ -1,10 +1,22 @@
 function ProfileCard(props) {
-    const { title, handle, image } = props;
+    const { title, handle, image, description } = props;
     return (
-        <div>
-            <h2>{title}</h2>
-            <p>{handle}</p>
-            <img src={image} alt={title}></img>
+        <div className="card">
+            <div className="card-image">
+                <figure className="image is-1by1">
+                    <img src={image} alt={title} className="card-image"></img>
+                </figure>
+            </div>
+
+            <div className="card-content">
+                <div className="media-content">
+                    <p className="title is-4">{title}</p>
+                    <p className="subtitle is-6">{handle}</p>
+                </div>
+                <div className="content">
+                    {description}
+                </div>
+            </div>
         </div>
     );
 }
