@@ -1,8 +1,9 @@
 function ProfileCard(props) {
+    const { title, handle } = props;
     return (
         <div>
-            <h2>{props.title}</h2>
-            <span>{props.handle}</span>
+            <h2>{title}</h2>
+            <span>{handle}</span>
         </div>
     );
 }
