@@ -1,9 +1,10 @@
 function ProfileCard(props) {
-    const { title, handle } = props;
+    const { title, handle, image } = props;
     return (
         <div>
             <h2>{title}</h2>
-            <span>{handle}</span>
+            <p>{handle}</p>
+            <img src={image} alt={title}></img>
         </div>
     );
 }

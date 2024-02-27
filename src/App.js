@@ -1,6 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import ProfileCard from './ProfileCard';
+import AlexaImage from './images/alexa.png';
+import CortanaImage from './images/cortana.png';
+import SiriImage from './images/siri.png';
 
 function App() {
   let message = 'Bye there!';
@@ -9,9 +11,9 @@ function App() {
   return (
     <div>
       <h1>Personal Digital Assistants</h1>
-      <ProfileCard title="Alexa" handle="@alexa99"></ProfileCard>
-      <ProfileCard title="Cortana" handle="@cortana32"></ProfileCard>
-      <ProfileCard title="Siri" handle="@siri01"></ProfileCard>
+      <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage}></ProfileCard>
+      <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImage}></ProfileCard>
+      <ProfileCard title="Siri" handle="@siri01" image={SiriImage}></ProfileCard>
     </div>
   );
 }
