@@ -1,7 +1,7 @@
-function AnimalTile() {
+function AnimalTile(props) {
     return (
         <div>
-            Cow
+            {props.type}
         </div>
     );
 }
