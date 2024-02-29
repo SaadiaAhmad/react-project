@@ -1,13 +1,13 @@
 import AnimalTile from "./AnimalTile";
 import { useState } from 'react';
-import './Animals.css';
+import './AnimalsShow.css';
 
 function getRandomAnimal() {
     const animals = ['cow', 'horse', 'bird', 'dog', 'gator', 'sheep', 'fish', 'cat', 'mouse', 'hen', 'duck', 'rabbit', 'wolf'];
     return animals[Math.floor(Math.random() * animals.length)];
 }
 
-function Animals() {
+function AnimalsShow() {
     const [ animals, setAnimals ] = useState([]);
 
     const handleButtonClick = () => {
@@ -38,4 +38,4 @@ function Animals() {
     );
 }
 
-export default Animals;
+export default AnimalsShow;
