@@ -1,19 +1,21 @@
 import AnimalTile from "./AnimalTile";
 import { useState } from 'react';
+import './Animals.css';
 
 function getRandomAnimal() {
-    const animals = ['cow', 'horse', 'bird', 'dog', 'gator', 'horse', 'fish', 'cat', 'mouse', 'hen', 'duck', 'rabbit', 'wolf'];
+    const animals = ['cow', 'horse', 'bird', 'dog', 'gator', 'sheep', 'fish', 'cat', 'mouse', 'hen', 'duck', 'rabbit', 'wolf'];
     return animals[Math.floor(Math.random() * animals.length)];
 }
 
 function Animals() {
     const [ animals, setAnimals ] = useState([]);
 
-    console.log('animals', animals);
-    console.log('f', getRandomAnimal());
-
     const handleButtonClick = () => {
         setAnimals([...animals, getRandomAnimal()]);
+    }
+
+    const clearAnimals = () => {
+        setAnimals([]);
     }
 
     //Is there no for loop in React?
@@ -27,9 +29,11 @@ function Animals() {
                 </div>
             </section>
 
-            <button onClick={handleButtonClick}>Add Animal</button>
-            <p>Animals to show: {animals.length}</p>
-            {renderedAnimals}
+            <div className="animals">
+                <button onClick={handleButtonClick}>Add Animal</button>
+                <p>Animals to show: {animals.length}</p> <a onClick={clearAnimals}>Clear</a>
+                <div className="animal-list">{renderedAnimals}</div>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,22 @@
+.animals {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    button {
+        color: white;
+        background-color: lightseagreen;
+        border: 1px solid green;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 300px;
+        height: 77px;
+    }
+
+    .animal-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
