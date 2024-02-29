@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import './AnimalTile.css';
-import Bird from '../svg/bird.svg';
-import Cat from '../svg/cat.svg';
-import Cow from '../svg/cow.svg';
-import Dog from '../svg/dog.svg';
-import Duck from '../svg/duck.svg';
-import Fish from '../svg/fish.svg';
-import Gator from '../svg/gator.svg';
-import Heart from '../svg/heart.svg';
-import Hen from '../svg/hen.svg';
-import Horse from '../svg/horse.svg';
-import Mouse from '../svg/mouse.svg';
-import Rabbit from '../svg/rabbit.svg';
-import Sheep from '../svg/sheep.svg';
-import Wolf from '../svg/wolf.svg';
+import Bird from '../../svg/animals-show/bird.svg';
+import Cat from '../../svg/animals-show/cat.svg';
+import Cow from '../../svg/animals-show/cow.svg';
+import Dog from '../../svg/animals-show/dog.svg';
+import Duck from '../../svg/animals-show/duck.svg';
+import Fish from '../../svg/animals-show/fish.svg';
+import Gator from '../../svg/animals-show/gator.svg';
+import Heart from '../../svg/animals-show/heart.svg';
+import Hen from '../../svg/animals-show/hen.svg';
+import Horse from '../../svg/animals-show/horse.svg';
+import Mouse from '../../svg/animals-show/mouse.svg';
+import Rabbit from '../../svg/animals-show/rabbit.svg';
+import Sheep from '../../svg/animals-show/sheep.svg';
+import Wolf from '../../svg/animals-show/wolf.svg';
 
 function AnimalTile(props) {
     window.scrollTo(0, document.body.scrollHeight);

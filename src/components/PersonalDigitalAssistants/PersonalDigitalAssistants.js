@@ -1,6 +1,6 @@
-import AlexaImage from '../images/digital_assistant/alexa.png';
-import CortanaImage from '../images/digital_assistant/cortana.png';
-import SiriImage from '../images/digital_assistant/siri.png';
+import AlexaImage from '../../images/digital_assistant/alexa.png';
+import CortanaImage from '../../images/digital_assistant/cortana.png';
+import SiriImage from '../../images/digital_assistant/siri.png';
 import ProfileCard from './ProfileCard';
 
 function PersonalDigitalAssistants() {
