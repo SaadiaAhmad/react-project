@@ -1,7 +1,7 @@
 import './App.css';
 import 'bulma/css/bulma.css';
-import PersonalDigitalAssistant from './PersonalDigitalAssistants/PersonalDigitalAssistants';
-import AnimalsShow from './AnimalsShow/AnimalsShow';
+import PersonalDigitalAssistant from './components/PersonalDigitalAssistants/PersonalDigitalAssistants';
+import AnimalsShow from './components/AnimalsShow/AnimalsShow';
 
 function App() {
   return (
