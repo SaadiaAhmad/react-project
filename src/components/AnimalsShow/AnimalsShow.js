@@ -29,9 +29,10 @@ function AnimalsShow() {
                 </div>
             </section>
 
-            <div className="animals">
+            <div className="animals-container">
                 <button onClick={handleButtonClick}>Add Animal</button>
-                <p>Animals to show: {animals.length}</p> <a onClick={clearAnimals}>Clear</a>
+                <p>Animals to show: {animals.length}</p>
+                <a onClick={clearAnimals}>Clear</a>
                 <div className="animal-list">{renderedAnimals}</div>
             </div>
         </div>
