@@ -1,12 +1,14 @@
 import ImageList from './ImageList';
 import SearchBar from './SearchBar';
 import searchImages from '../../api';
+import { useState } from 'react';
 
 function PictureSearchEngine() {
-    let imageList = [];
+    const [ imageList, setImageList ] = useState([]);
 
-    const handleSearchSubmit = (searchTerm) => {
-        imageList = searchImages(searchTerm);
+    const handleSearchSubmit = async (searchTerm) => {
+        const images = await searchImages(searchTerm);
+        setImageList(images);
     };
 
     return (
