@@ -1,3 +1,11 @@
 .search-bar-container {
-    padding: 20px;;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    form input {
+        margin: 8px;
+        width: auto;
+        height: 30px;
+    }
 }
