@@ -1,6 +1,10 @@
-function ImageItem() {
+import './ImageItem.css';
+
+function ImageItem(props) {
     return (
-        <div></div>
+        <div className="image-item">
+            <img src={props.imageSource} alt="searched image"></img>
+        </div>
     );
 }
 

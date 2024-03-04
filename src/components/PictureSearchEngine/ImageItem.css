@@ -1,0 +1,10 @@
+.image-item {
+    padding: 20px;
+
+    img {
+        width: auto;
+        max-width: 500px;
+        height: auto;
+        max-height: 700px;
+    }
+}

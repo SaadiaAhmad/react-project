@@ -1,13 +1,12 @@
 import ImageItem from "./ImageItem";
+import './ImageList.css';
 
 function ImageList(props) {
-    // const imageList = props.imageList;
-    // console.log('Images: ', props.imageList);
+    const renderedImages = props.imageList.map((image) => <ImageItem imageSource={image.urls.regular} key={image.id}></ImageItem>);
 
-    // const renderedImages = imageList;
     return (
-        <div>
-            <ImageItem></ImageItem>
+        <div className="image-list">
+            {renderedImages}
         </div>
     );
 }
