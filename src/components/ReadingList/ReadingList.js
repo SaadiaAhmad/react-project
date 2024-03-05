@@ -1,13 +1,13 @@
 import { useState } from "react";
 import BookCreate from "./BookCreate/BookCreate";
 import BookList from "./BookList/BookList";
+import './ReadingList.css';
 
 function ReadingList() {
     const [ books, setBooks ] = useState([]);
 
     const createBook = (title) => {
-        // id: books.length will be changed shortly as this is goingto cause bugs
-        const newBook = {id: books.length, title: title};
+        const newBook = {id: Math.round(Math.random() * 99999), title: title};
         const updatedBooks = [...books, newBook];
         setBooks(updatedBooks);
     }
@@ -16,8 +16,9 @@ function ReadingList() {
 
     }
 
-    const deleteBook = () => {
-        
+    const deleteBookById = (id) => {
+        const updatedBooks = books.filter((book) => book.id !== id);
+        setBooks(updatedBooks);
     }
 
     return (
@@ -28,8 +29,10 @@ function ReadingList() {
                 </div>
             </section>
 
-            <BookList bookList={books}></BookList>
-            <BookCreate onCreate={createBook}></BookCreate>
+            <div className="reading-list">
+                <BookList bookList={books} onDelete={deleteBookById}></BookList>
+                <BookCreate onCreate={createBook}></BookCreate>
+            </div>
 
         </div>
     )

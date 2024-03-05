@@ -1,11 +1,12 @@
 import BookItem from "../BookItem/BookItem";
+import './BookList.css';
 
 function BookList(props) {
-    console.log(props.bookList);
+    const renderedBooks = props.bookList.map((book) => <BookItem book={book} key={book.id} onDelete={props.onDelete}></BookItem>)
+
     return(
-        <div>
-            Book List
-            <BookItem></BookItem>
+        <div className="book-list-container">
+            {renderedBooks}
         </div>
     )
 }
