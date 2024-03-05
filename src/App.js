@@ -2,7 +2,8 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import PersonalDigitalAssistant from './components/PersonalDigitalAssistants/PersonalDigitalAssistants';
 import AnimalsShow from './components/AnimalsShow/AnimalsShow';
-import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchEngine'
+import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchEngine';
+import ReadingList from './components/ReadingList/ReadingList';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <PersonalDigitalAssistant></PersonalDigitalAssistant>
       <AnimalsShow></AnimalsShow>
       <PictureSearchEngine></PictureSearchEngine>
+      <ReadingList></ReadingList>
     </div>
   );
 }
