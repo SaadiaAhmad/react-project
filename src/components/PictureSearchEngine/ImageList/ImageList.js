@@ -1,4 +1,4 @@
-import ImageItem from "./ImageItem";
+import ImageItem from "../ImageItem/ImageItem";
 import './ImageList.css';
 
 function ImageList(props) {

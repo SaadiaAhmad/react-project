@@ -1,3 +1,5 @@
+import './ProfileCard.css';
+
 function ProfileCard(props) {
     const { title, handle, image, description } = props;
     return (

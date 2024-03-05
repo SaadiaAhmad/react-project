@@ -1,4 +1,4 @@
-import AnimalTile from "./AnimalTile";
+import AnimalTile from "./AnimalTile/AnimalTile";
 import { useState } from 'react';
 import './AnimalsShow.css';
 
