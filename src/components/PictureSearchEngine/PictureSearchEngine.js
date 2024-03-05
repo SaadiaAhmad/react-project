@@ -11,6 +11,10 @@ function PictureSearchEngine() {
         setImageList(images);
     };
 
+    const clearSearch = () => {
+        setImageList([]);
+    }
+
     return (
         <div>
             <section className='hero is-primary'>
@@ -20,7 +24,7 @@ function PictureSearchEngine() {
             </section>
 
             <div>
-                <SearchBar onSubmit={handleSearchSubmit}></SearchBar>
+                <SearchBar onSubmit={handleSearchSubmit} clearSearch={clearSearch}></SearchBar>
                 <ImageList imageList={imageList}></ImageList>
             </div>
         </div>

@@ -13,11 +13,17 @@ function SearchBar(props) {
         props.onSubmit(searchTerm);
     }
 
+    const clearSearch = () => {
+        setSearchTerm('');
+        props.clearSearch();
+    }
+
     return (
         <div className="search-bar-container">
             <form onSubmit={handleFormSubmit}>
                 <label>Search for images:</label>
                 <input name="search" value={searchTerm} onChange={handleInputChange}></input>
+                <a onClick={clearSearch}>Clear</a>
             </form>
         </div>
     );
