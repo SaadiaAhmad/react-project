@@ -1,6 +1,7 @@
 // 1. Import the React and ReactDom Libraries
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import './index.css';
 
 // 2. Get a reference to the div with Id root
 const el = document.getElementById('root');

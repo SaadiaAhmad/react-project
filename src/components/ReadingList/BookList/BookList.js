@@ -1,6 +1,7 @@
 import BookItem from "../BookItem/BookItem";
 
-function BookList() {
+function BookList(props) {
+    console.log(props.bookList);
     return(
         <div>
             Book List
