@@ -1,12 +1,4 @@
-.book-create-container {
-    display: flex;
-    /* justify-content: center; */
-    form input {
-        margin: 8px;
-        width: auto;
-        height: 30px;
-    }
-
+.book-edit {
     button {
         color: white;
         background-color: lightseagreen;
@@ -14,7 +6,7 @@
         border-radius: 5px;
         font-size: 14px;
         width: 75px;
-        height: 31px;
+        height: 25px;
         cursor: pointer;
     }
 }
