@@ -12,8 +12,12 @@ function ReadingList() {
         setBooks(updatedBooks);
     }
 
-    const editBook = () => {
-
+    const editBookById = (id, newTitle) => {
+        const updatedBooks = books.map((book) => {
+            if(book.id === id) return {...book, title: newTitle}
+            return book;
+        });
+        setBooks(updatedBooks);
     }
 
     const deleteBookById = (id) => {
@@ -30,7 +34,7 @@ function ReadingList() {
             </section>
 
             <div className="reading-list">
-                <BookList bookList={books} onDelete={deleteBookById}></BookList>
+                <BookList bookList={books} onDelete={deleteBookById} onEdit={editBookById}></BookList>
                 <BookCreate onCreate={createBook}></BookCreate>
             </div>
 
