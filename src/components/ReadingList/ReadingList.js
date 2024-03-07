@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BookCreate from "./BookCreate/BookCreate";
 import BookList from "./BookList/BookList";
 import './ReadingList.css';
@@ -6,6 +6,10 @@ import axios from "axios";
 
 function ReadingList() {
     const [ books, setBooks ] = useState([]);
+
+    useEffect(() => {
+        fetchBooks();
+    }, []);
 
     const fetchBooks = async () => {
         const response = await axios.get('http://localhost:3001/books');
