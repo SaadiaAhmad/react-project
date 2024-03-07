@@ -4,6 +4,7 @@ import PersonalDigitalAssistant from './components/PersonalDigitalAssistants/Per
 import AnimalsShow from './components/AnimalsShow/AnimalsShow';
 import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchEngine';
 import ReadingList from './components/ReadingList/ReadingList';
+import { BooksProvider } from './context/books';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <PersonalDigitalAssistant></PersonalDigitalAssistant>
       <AnimalsShow></AnimalsShow>
       <PictureSearchEngine></PictureSearchEngine>
-      <ReadingList></ReadingList>
+      <BooksProvider>
+        <ReadingList></ReadingList>
+      </BooksProvider>
     </div>
   );
 }
