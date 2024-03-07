@@ -2,13 +2,19 @@ import { useState } from "react";
 import BookCreate from "./BookCreate/BookCreate";
 import BookList from "./BookList/BookList";
 import './ReadingList.css';
+import axios from "axios";
 
 function ReadingList() {
     const [ books, setBooks ] = useState([]);
 
-    const createBook = (title) => {
-        const newBook = {id: Math.round(Math.random() * 99999), title: title};
-        const updatedBooks = [...books, newBook];
+    const fetchBooks = async () => {
+        const response = await axios.get('http://localhost:3001/books');
+        setBooks(response.data);
+    }
+
+    const createBook = async (title) => {
+        const response = await axios.post('http://localhost:3001/books', {title});
+        const updatedBooks = [...books, response.data];
         setBooks(updatedBooks);
     }
 
