@@ -1,25 +1,26 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import BookEdit from "../BookEdit/BookEdit";
 import './BookItem.css';
+import BooksContext from "../../../context/booksReadingList";
 
 function BookItem(props) {
     const [ showEdit, setShowEdit ] = useState(false);
+    const { deleteBookById } = useContext(BooksContext);
 
     const toggleEdit = () => {
         setShowEdit(!showEdit);
     }
 
     const onDelete = () => {
-        props.onDelete(props.book.id);
+        deleteBookById(props.book.id);
     }
 
-    const handleEditSave = (title) => {
+    const handleEditSave = () => {
         setShowEdit(false);
-        props.onEdit(props.book.id, title);
     }
 
     let itemContent = <h3>{props.book.title}</h3>;
-    if(showEdit) itemContent = <BookEdit titleValue={props.book.title} onEditSave={handleEditSave}></BookEdit>;
+    if(showEdit) itemContent = <BookEdit book={props.book} onEditSave={handleEditSave}></BookEdit>;
 
     const imageSrc = `https://picsum.photos/seed/${props.book.id}/200/250`;
 

@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import BookItem from "../BookItem/BookItem";
 import './BookList.css';
-import BooksContext from "../../../context/books";
+import BooksContext from "../../../context/booksReadingList";
 
-function BookList(props) {
-    const num = useContext(BooksContext);
-
-    const renderedBooks = props.bookList.map((book) => <BookItem book={book} key={book.id} onDelete={props.onDelete} onEdit={props.onEdit}></BookItem>)
+function BookList() {
+    const { books } = useContext(BooksContext);
+    const renderedBooks = books.map((book) => <BookItem book={book} key={book.id}></BookItem>)
 
     return(
         <div className="book-list-container">
