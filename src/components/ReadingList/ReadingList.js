@@ -9,7 +9,7 @@ function ReadingList() {
 
     useEffect(() => {
         fetchBooks();
-    }, []);
+    }, [fetchBooks]);
     
     return (
         <div>
