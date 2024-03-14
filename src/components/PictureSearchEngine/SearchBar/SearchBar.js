@@ -23,7 +23,7 @@ function SearchBar(props) {
             <form onSubmit={handleFormSubmit}>
                 <label>Search for images:</label>
                 <input name="search" value={searchTerm} onChange={handleInputChange}></input>
-                <a onClick={clearSearch}>Clear</a>
+                <a onClick={clearSearch} href="javascript.void(0);">Clear</a>
             </form>
         </div>
     );
