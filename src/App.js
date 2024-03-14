@@ -5,6 +5,7 @@ import AnimalsShow from './components/AnimalsShow/AnimalsShow';
 import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchEngine';
 import ReadingList from './components/ReadingList/ReadingList';
 import { BooksProvider } from './context/booksReadingList';
+import MultiComponents from './components/MultiComponents/MultiComponents';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BooksProvider>
         <ReadingList></ReadingList>
       </BooksProvider>
+      <MultiComponents></MultiComponents>
     </div>
   );
 }
