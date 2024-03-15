@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { twMerge } from 'tailwind-merge';
 
 function Button({ 
     children,
@@ -10,7 +11,8 @@ function Button({
     outline,
     rounded
 }) {
-    const finalClassName = classnames('px-3 py-1.5 m-3 border', {
+    const finalClassName = twMerge(
+        classnames('px-3 py-1.5 m-3 border', {
         'border-blue-600 bg-blue-500 text-white': primary,
         'border-gray-900 bg-gray-800 text-white': secondary,
         'border-green-600 bg-green-500 text-white': success,
@@ -18,7 +20,8 @@ function Button({
         'border-red-600 bg-red-500 text-white': danger,
         // 'border-blue-600 bg-blue-500 text-white': outline,
         // 'border-blue-600 bg-blue-500 text-white': rounded,
-    });
+        })
+    );
 
     return (
         <div>
