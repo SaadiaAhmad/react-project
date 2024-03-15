@@ -9,10 +9,11 @@ function Button({
     warning,
     danger,
     outline,
-    rounded
+    rounded,
+    ...rest
 }) {
     const finalClassName = twMerge(
-        classnames('px-3 py-1.5 m-3 border', {
+        classnames('px-3 py-1.5 m-3 border flex items-center', {
         'border-blue-600 bg-blue-500 text-white': primary,
         'border-gray-900 bg-gray-800 text-white': secondary,
         'border-green-600 bg-green-500 text-white': success,
@@ -30,7 +31,7 @@ function Button({
 
     return (
         <div>
-            <button className={finalClassName}>{children}</button>
+            <button className={finalClassName} {...rest}>{children}</button>
         </div>
     )
 }
