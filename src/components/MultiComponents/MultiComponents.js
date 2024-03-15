@@ -10,11 +10,11 @@ function MultiComponents() {
                 </div>
             </section>
 
-            <Button>One</Button>
-            <Button>Click me!!</Button>
-            <Button>Buy Now</Button>
-            <Button>Save</Button>
-            <Button>Add to Cart</Button>
+            <Button primary>One</Button>
+            <Button secondary>Click me!!</Button>
+            <Button success>Buy Now</Button>
+            <Button warning>Save</Button>
+            <Button danger>Add to Cart</Button>
             <Button>Save to Wishlist</Button>
             <Button>Checkout</Button>
         </div>
