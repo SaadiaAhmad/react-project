@@ -13,7 +13,7 @@ function MultiComponents() {
                 </div>
             </section>
 
-            <Button primary onClick={handleClick}>
+            <Button primary onClick={handleClick} className="mb-5">
                 <GoBell className="mr-1"></GoBell>
                 One
             </Button>
