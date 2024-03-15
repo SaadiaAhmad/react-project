@@ -18,8 +18,13 @@ function Button({
         'border-green-600 bg-green-500 text-white': success,
         'border-yellow-500 bg-yellow-400 text-white': warning,
         'border-red-600 bg-red-500 text-white': danger,
-        // 'border-blue-600 bg-blue-500 text-white': outline,
-        // 'border-blue-600 bg-blue-500 text-white': rounded,
+        'bg-white': outline,
+        'rounded-full': rounded,
+        'text-blue-500': outline && primary,
+        'text-gray-500': outline && secondary,
+        'text-green-500': outline && success,
+        'text-yellow-500': outline && warning,
+        'text-red-500': outline && danger,
         })
     );
 

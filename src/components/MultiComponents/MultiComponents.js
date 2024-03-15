@@ -15,8 +15,8 @@ function MultiComponents() {
             <Button success>Buy Now</Button>
             <Button warning>Save</Button>
             <Button danger>Add to Cart</Button>
-            <Button>Save to Wishlist</Button>
-            <Button>Checkout</Button>
+            <Button danger rounded>Save to Wishlist</Button>
+            <Button success outline>Checkout</Button>
         </div>
     )
 }
