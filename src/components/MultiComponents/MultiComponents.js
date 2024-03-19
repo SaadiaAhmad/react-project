@@ -2,6 +2,7 @@ import Button from "./Button/Button";
 import { GoBell, GoCloudDownload, GoDatabase, GoGift, GoSmiley, GoZap, GoSquirrel } from 'react-icons/go';
 import './MultiComponents.css';
 import Accordion from "./Accordion/Accordion";
+import Dropdown from "./Dropdown.js/Dropdown";
 
 function MultiComponents() {
     const handleClick = () => {
@@ -21,7 +22,22 @@ function MultiComponents() {
             header: 'Weekend is here?',
             content: 'Yayyy'
         }
-    ]
+    ];
+
+    const dropdownItems = [
+        {
+            label: 'First item',
+            value: 'first'
+        },
+        {
+            label: 'Second item',
+            value: 'second'
+        },
+        {
+            label: 'Third item',
+            value: 'third'
+        }
+    ];
 
     return (
         <div>
@@ -64,6 +80,7 @@ function MultiComponents() {
                 </div>
                 <div className="flex-child">
                     <Accordion items={accordionItems}></Accordion>
+                    <Dropdown items={dropdownItems}></Dropdown>
                 </div>
             </div>
 
