@@ -1,6 +1,5 @@
 .book-create-container {
     display: flex;
-    /* justify-content: center; */
     form input {
         margin: 8px;
         width: auto;

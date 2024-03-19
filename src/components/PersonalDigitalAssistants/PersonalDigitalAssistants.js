@@ -14,17 +14,17 @@ function PersonalDigitalAssistants() {
 
             <div className="container">
                 <div className='section'>
-                <div className='columns'>
-                    <div className='column is-3'>
-                    <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage} description="Alexa was created by Amazon"></ProfileCard>
+                    <div className='columns'>
+                        <div className='column is-3'>
+                            <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage} description="Alexa was created by Amazon"></ProfileCard>
+                        </div>
+                        <div className='column is-3'>
+                            <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImage} description="Cortana was created by Microsoft"></ProfileCard>
+                        </div>
+                        <div className='column is-3'>
+                            <ProfileCard title="Siri" handle="@siri01" image={SiriImage} description="Siri was made by Apple"></ProfileCard>
+                        </div>
                     </div>
-                    <div className='column is-3'>
-                    <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImage} description="Cortana was created by Microsoft"></ProfileCard>
-                    </div>
-                    <div className='column is-3'>
-                    <ProfileCard title="Siri" handle="@siri01" image={SiriImage} description="Siri was made by Apple"></ProfileCard>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>

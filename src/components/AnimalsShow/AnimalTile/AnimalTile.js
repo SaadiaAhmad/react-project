@@ -1,6 +1,6 @@
 import './AnimalTile.css';
-
 import { useState } from 'react';
+
 import Bird from '../../../svg/animals-show/bird.svg';
 import Cat from '../../../svg/animals-show/cat.svg';
 import Cow from '../../../svg/animals-show/cow.svg';
@@ -17,7 +17,6 @@ import Sheep from '../../../svg/animals-show/sheep.svg';
 import Wolf from '../../../svg/animals-show/wolf.svg';
 
 function AnimalTile(props) {
-    window.scrollTo(0, document.body.scrollHeight);
     const [ clicks, setClicks ] = useState(0);
 
     const handleAnimalClick = () => {
