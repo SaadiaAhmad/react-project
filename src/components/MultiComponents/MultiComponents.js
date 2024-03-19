@@ -1,13 +1,9 @@
 import './MultiComponents.css';
 import Dropdown from "./Dropdown.js/Dropdown";
 import ButtonList from "./ButtonList/ButtonList";
-import AccordionList from './AccordionList/AccordionList';
+import Accordion from './Accordion/Accordion';
 
 function MultiComponents() {
-    const handleClick = () => {
-        console.log('Button clicked')
-    };
-
     const accordionItems = [
         {
             header: 'What day is today?',
@@ -51,7 +47,7 @@ function MultiComponents() {
                     <ButtonList></ButtonList>
                 </div>
                 <div className="flex-child">
-                    <AccordionList items={accordionItems}></AccordionList>
+                    <Accordion items={accordionItems}></Accordion>
                     <Dropdown items={dropdownItems}></Dropdown>
                 </div>
             </div>
