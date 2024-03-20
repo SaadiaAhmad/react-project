@@ -2,8 +2,11 @@ import './MultiComponents.css';
 import Dropdown from "./Dropdown.js/Dropdown";
 import ButtonList from "./ButtonList/ButtonList";
 import Accordion from './Accordion/Accordion';
+import { useState } from "react";
 
 function MultiComponents() {
+    const [ selectedOption, setSelecetedOption ] = useState(null);
+
     const accordionItems = [
         {
             header: 'What day is today?',
@@ -19,7 +22,7 @@ function MultiComponents() {
         }
     ];
 
-    const dropdownItems = [
+    const dropdownOptions = [
         {
             label: 'First item',
             value: 'first'
@@ -33,6 +36,10 @@ function MultiComponents() {
             value: 'third'
         }
     ];
+
+    const handleSelectChange = (option) => {
+        setSelecetedOption(option);
+    }
 
     return (
         <div>
@@ -48,7 +55,7 @@ function MultiComponents() {
                 </div>
                 <div className="flex-child">
                     <Accordion items={accordionItems}></Accordion>
-                    <Dropdown items={dropdownItems}></Dropdown>
+                    <Dropdown options={dropdownOptions} selectedOption={selectedOption} onSelectChange={(val) => handleSelectChange(val)}></Dropdown>
                 </div>
             </div>
 
