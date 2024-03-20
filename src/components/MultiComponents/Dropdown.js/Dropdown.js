@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoChevronDown, GoChevronLeft} from 'react-icons/go';
 
 function Dropdown({ options, selectedOption, onSelectChange }) {
     const [ isOpen, setIsOpen ] = useState(false);
+    const dropdownEl = useRef();
+
+    useEffect(() => {
+        const handler = (event) => {
+            if(!(dropdownEl?.current?.contains(event.target))) setIsOpen(false);
+        };
+
+        document.addEventListener('click', handler, true);
+
+        const cleanUp = () => {
+            document.removeEventListener('click', handler);
+        };
+        return cleanUp;
+    }, []);
 
     const handleDropdownClick = () => {
         setIsOpen(!isOpen);
@@ -24,7 +38,7 @@ function Dropdown({ options, selectedOption, onSelectChange }) {
     });
 
     return (
-        <div className="m-5">
+        <div ref={dropdownEl} className="m-5">
             <h3 className="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer hover:bg-gray-100" onClick={handleDropdownClick}>
                     {selectedOption?.label || 'Select...'}
                     {renderedIcon}
