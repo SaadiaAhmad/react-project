@@ -2,14 +2,38 @@ import Link from '../Link/Link';
 import './Sidebar.css';
 
 function Sidebar() {
+    const links = [
+        {
+            label: 'Home',
+            path: '/'
+        },
+        {
+            label: 'Personal Digital Assistant',
+            path: '/personal-digital-assistant'
+        },
+        {
+            label: 'Animals Show',
+            path: '/animals-show'
+        },
+        {
+            label: 'Picture Search Engine',
+            path: '/picture-search-engine'
+        },
+        {
+            label: 'Reading List',
+            path: '/reading-list'
+        },
+        {
+            label: 'Multi Components',
+            path: '/multi-components'
+        },
+    ];
+
+    const renderedLinks = links.map((link) => <Link to={link.path}>{link.label}</Link>)
+
     return (
         <div className='side-navigation'>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/personal-digital-assistant'}>Personal Digital Assistant</Link>
-            <Link to={'/animals-show'}>Animals Show</Link>
-            <Link to={'/picture-search-engine'}>Picture Search Engine</Link>
-            <Link to={'/reading-list'}>Reading List</Link>
-            <Link to={'/multi-components'}>Multi Components</Link>
+            {renderedLinks}
         </div>
     )
 }

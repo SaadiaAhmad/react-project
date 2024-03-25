@@ -5,6 +5,10 @@
     height: 100vh;
     border: 1px solid grey;
 
+    /* position: sticky;
+    top: 0;
+    overflow-y: scroll; */
+
     a {
         padding: 8px;
         border: 1px solid grey;
