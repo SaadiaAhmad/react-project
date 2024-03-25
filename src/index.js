@@ -2,6 +2,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
+import { NavigationProvider } from './context/navigation';
 
 // 2. Get a reference to the div with Id root
 const el = document.getElementById('root');
@@ -13,4 +14,8 @@ const root = ReactDOM.createRoot(el);
 // Not here, we will use the App.js component
 
 // 5. Show the component on the screen
-root.render(<App></App>);
+root.render(
+    <NavigationProvider>
+        <App></App>
+    </NavigationProvider>
+);

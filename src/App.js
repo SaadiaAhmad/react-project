@@ -6,10 +6,12 @@ import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchE
 import ReadingList from './components/ReadingList/ReadingList';
 import { BooksProvider } from './context/booksReadingList';
 import MultiComponents from './components/MultiComponents/MultiComponents';
+import Link from './components/Link/Link';
 
 function App() {
   return (
     <div>
+      <Link to={'/application'}>Click Me</Link>
       <PersonalDigitalAssistant></PersonalDigitalAssistant>
       <AnimalsShow></AnimalsShow>
       <PictureSearchEngine></PictureSearchEngine>
