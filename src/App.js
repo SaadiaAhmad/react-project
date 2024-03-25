@@ -6,24 +6,22 @@ import PictureSearchEngine from './components/PictureSearchEngine/PictureSearchE
 import ReadingList from './components/ReadingList/ReadingList';
 import { BooksProvider } from './context/booksReadingList';
 import MultiComponents from './components/MultiComponents/MultiComponents';
-import Link from './components/Link/Link';
+
 import Route from './components/Route/Route';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className='app-container'>
-      <div className='side-navigation'>
-        <Link to={'/'}>Home</Link>
-        <Link to={'/personal-digital-assistant'}>Personal Digital Assistant</Link>
-        <Link to={'/animals-show'}>Animals Show</Link>
-        <Link to={'/picture-search-engine'}>Picture Search Engine</Link>
-        <Link to={'/reading-list'}>Reading List</Link>
-        <Link to={'/multi-components'}>Multi Components</Link>
-      </div>
+      <Sidebar></Sidebar>
     
       <div className='main-content'>
         <Route path="/">
-          <h1 className='home-text'>Welcome to My React App</h1>
+          <section className='hero is-primary'>
+              <div className='hero-body'>
+                <p className='title'>Welcome to My React App</p>
+              </div>
+            </section>
         </Route>
         <Route path="/personal-digital-assistant">
           <PersonalDigitalAssistant></PersonalDigitalAssistant>
