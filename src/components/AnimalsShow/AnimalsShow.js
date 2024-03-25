@@ -32,7 +32,7 @@ function AnimalsShow() {
             <div className="animals-container">
                 <button onClick={handleButtonClick}>Add Animal</button>
                 <p>Animals to show: {animals.length}</p>
-                <a onClick={clearAnimals} href="javascript.void(0);">Clear</a>
+                <a onClick={clearAnimals}>Clear</a>
                 <div className="animal-list">{renderedAnimals}</div>
             </div>
         </div>
