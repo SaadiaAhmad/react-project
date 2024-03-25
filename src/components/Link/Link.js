@@ -1,16 +1,15 @@
-import { useContext } from "react";
-import NavigationContext from "../../context/navigation";
+import UseNavigation from "../../hooks/use-navigation";
 
 function Link({ to, children }) {
-    const { navigate } = useContext(NavigationContext);
+    const { navigate } = UseNavigation();
 
     const handleClick = (event) => {
-        event.preventDefault();
+        if(!(event.ctrlKey || event.metaKey)) event.preventDefault();
         navigate(to);
     }
 
     return (
-        <a onClick={handleClick}>{ children }</a>
+        <a href={to} onClick={handleClick}>{ children }</a>
     )
 }
 
