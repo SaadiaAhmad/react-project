@@ -1,7 +1,7 @@
 import UseNavigation from "../../hooks/use-navigation";
 
 function Link({ to, children }) {
-    const { navigate } = UseNavigation();
+    const { currentPath, navigate } = UseNavigation();
 
     const handleClick = (event) => {
         if(!(event.ctrlKey || event.metaKey)) event.preventDefault();
@@ -9,7 +9,7 @@ function Link({ to, children }) {
     }
 
     return (
-        <a href={to} onClick={handleClick}>{ children }</a>
+        <a href={to} style={to === currentPath ? { fontWeight: 900, backgroundColor: "azure", borderLeft: '5px solid #485fc7' } : {}} onClick={handleClick}>{ children }</a>
     )
 }
 
