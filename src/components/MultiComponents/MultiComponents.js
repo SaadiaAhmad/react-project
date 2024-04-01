@@ -53,7 +53,16 @@ function MultiComponents() {
     }
 
     const modal = <Modal onClose={handleModalClose} actionBar={<Button primary onClick={handleModalClose}>I Accept</Button>}>
-        <p>Here is an important agreement for you to accept.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare aliquam interdum. Cras malesuada tincidunt nisl, 
+            quis iaculis risus vehicula non. Aliquam volutpat nunc justo, facilisis bibendum nibh ornare ac. Sed ornare suscipit mauris ut ultrices. 
+            Duis in orci nisl. Quisque at mattis ipsum, a commodo est. Mauris vitae quam vel nisi dictum iaculis. Vestibulum ante ipsum primis in faucibus 
+            orci luctus et ultrices posuere cubilia curae;
+        <br></br>
+        <br></br>
+            Cras pulvinar augue a efficitur gravida. Suspendisse vel ex ac arcu finibus semper non ac ligula. Quisque mauris nulla, convallis at imperdiet eget, 
+            faucibus nec ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sagittis risus non orci tempor dictum. Suspendisse vel nisi odio. 
+            Sed id ipsum nec arcu fringilla consequat. Fusce lobortis auctor placerat. Nullam nunc erat, luctus ac pharetra vitae, lobortis sit amet neque.
+        </p>
     </Modal>
 
     return (
