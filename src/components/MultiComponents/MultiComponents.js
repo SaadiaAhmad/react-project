@@ -52,6 +52,10 @@ function MultiComponents() {
         setShowModal(false);
     }
 
+    const modal = <Modal onClose={handleModalClose} actionBar={<Button primary onClick={handleModalClose}>I Accept</Button>}>
+        <p>Here is an important agreement for you to accept.</p>
+    </Modal>
+
     return (
         <div>
             <section className='hero is-primary'>
@@ -77,7 +81,7 @@ function MultiComponents() {
                     <h2 className='child-title'>Modal</h2>
                     <div className='modal-div'>
                         <Button primary onClick={handleModalOpenClick}>Open Modal</Button>
-                        { showModal && <Modal onClose={handleModalClose}></Modal>}
+                        { showModal && modal}
                     </div>
                 </div>
             </div>
