@@ -1,7 +1,7 @@
 .side-navigation {
     display: flex;
     flex-direction: column;
-    width: 27%;
+    width: 30%;
     height: 100vh;
     border: 1px solid grey;
 
