@@ -33,7 +33,7 @@ function Sidebar() {
         }
     ];
 
-    const renderedLinks = links.map((link) => <Link to={link.path}>{link.label}</Link>)
+    const renderedLinks = links.map((link) => <Link to={link.path} key={link.path}>{link.label}</Link>)
 
     return (
         <div className='side-navigation'>

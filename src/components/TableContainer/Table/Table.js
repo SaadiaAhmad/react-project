@@ -1,14 +1,22 @@
+import { Fragment } from "react";
+
 function Table({ data, config, keyFn }) {
 
-    const renderedHeaders = config.map((item) =>
-        (
-            <th>{item.label}</th>
+    const renderedHeaders = config.map((item) => {
+        if(item.header) return (
+            <Fragment key={item.label}>
+                {item.header()}
+            </Fragment>
         )
-    )
+        else return (
+            <th key={item.label}>{item.label}</th>
+        )
+    });
+
     const renderedTableRows = data.map((item) => {
         const renderedCells = config.map((column) => 
             (
-                <td className="p-2">{column.render(item)}</td>
+                <td className="p-2" key={column.label}>{column.render(item)}</td>
             )
         );
         return (
@@ -16,9 +24,7 @@ function Table({ data, config, keyFn }) {
                 {renderedCells}
             </tr>
         );
-    }
-
-    );
+    });
 
     return (
         <table className="table-auto border-spacing-2 m-5">
