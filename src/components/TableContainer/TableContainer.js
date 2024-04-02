@@ -31,18 +31,23 @@ function TableConatiner() {
 
       const tableConfig = [
         {
-            label: 'Fruits'
+            label: 'Fruits',
+            render: (fruit) => fruit.name,
         },
         {
-            label: 'Color'
+            label: 'Color',
+            render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>
         },
         {
-            label: 'Score'
+            label: 'Score',
+            render: (fruit) => fruit.score
         }
       ]
 
+      const keyFn = (fruit) => fruit.name;
+
     return (
-        <Table data={tableData} config={tableConfig}></Table>
+        <Table data={tableData} config={tableConfig} keyFn={keyFn}></Table>
     )
 }
 
