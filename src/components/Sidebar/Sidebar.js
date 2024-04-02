@@ -27,6 +27,10 @@ function Sidebar() {
             label: 'Multi Components',
             path: '/multi-components'
         },
+        {
+            label: 'Table',
+            path: '/table'
+        }
     ];
 
     const renderedLinks = links.map((link) => <Link to={link.path}>{link.label}</Link>)
