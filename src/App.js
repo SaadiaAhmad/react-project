@@ -9,7 +9,7 @@ import MultiComponents from './components/MultiComponents/MultiComponents';
 
 import Route from './components/Route/Route';
 import Sidebar from './components/Sidebar/Sidebar';
-import Table from './components/Table/Table';
+import TableConatiner from './components/TableContainer/TableContainer';
 
 function App() {
   return (
@@ -42,7 +42,7 @@ function App() {
           <MultiComponents></MultiComponents>
         </Route>
         <Route path="/table">
-          <Table></Table>
+          <TableConatiner></TableConatiner>
         </Route>
       </div>
     </div>
