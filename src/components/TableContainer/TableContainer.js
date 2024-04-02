@@ -1,4 +1,4 @@
-import Table from "./Table/Table";
+import SortableTable from "./SortableTable/SortableTable";
 
 function TableConatiner() {
     const tableData = [
@@ -33,22 +33,23 @@ function TableConatiner() {
         {
             label: 'Fruits',
             render: (fruit) => fruit.name,
+            sortValue: (fruit) => fruit.name,
         },
         {
             label: 'Color',
             render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>
         },
         {
-            header: () => <th className="bg-red-500">Score</th>,
             label: 'Score',
-            render: (fruit) => fruit.score
+            render: (fruit) => fruit.score,
+            sortValue: (fruit) => fruit.score
         }
       ]
 
       const keyFn = (fruit) => fruit.name;
 
     return (
-        <Table data={tableData} config={tableConfig} keyFn={keyFn}></Table>
+        <SortableTable data={tableData} config={tableConfig} keyFn={keyFn}></SortableTable>
     )
 }
 

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import './Table.css';
 
 function Table({ data, config, keyFn }) {
 
@@ -9,7 +10,7 @@ function Table({ data, config, keyFn }) {
             </Fragment>
         )
         else return (
-            <th key={item.label}>{item.label}</th>
+            <th className="p-2" key={item.label}>{item.label}</th>
         )
     });
 
