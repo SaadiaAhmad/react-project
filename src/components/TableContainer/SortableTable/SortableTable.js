@@ -61,7 +61,7 @@ function SortableTable(props) {
         if(column.sortValue) return {
             ...column,
             header: () => 
-            <th className="p-2 cursor-pointer hover:bg-gray-100" onClick={() => handleHeaderClick(column.label)}>
+            <th className="p-2 cursor-pointer hover:bg-gray-100 align-middle" onClick={() => handleHeaderClick(column.label)}>
                 <div className="flex items-center">
                     {getIcons(column.label)}
                     {column.label}

@@ -9,22 +9,22 @@ function TableConatiner() {
         },
         {
           name: 'Orange',
-          color: 'bg-orange-500',
+          color: 'bg-orange-400',
           score: 3
         },
         {
           name: 'Banana',
-          color: 'bg-yellow-500',
+          color: 'bg-yellow-300',
           score: 4
         },
         {
           name: 'Watermelon',
-          color: 'bg-pink-500',
+          color: 'bg-red-600',
           score: 5
         },
         {
           name: 'Grapes',
-          color: 'bg-purple-500',
+          color: 'bg-purple-900',
           score: 3
         }
       ];

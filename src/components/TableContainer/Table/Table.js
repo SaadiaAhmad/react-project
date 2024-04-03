@@ -10,14 +10,14 @@ function Table({ data, config, keyFn }) {
             </Fragment>
         )
         else return (
-            <th className="p-2" key={item.label}>{item.label}</th>
+            <th className="p-2 align-middle" key={item.label}>{item.label}</th>
         )
     });
 
     const renderedTableRows = data.map((item) => {
         const renderedCells = config.map((column) => 
             (
-                <td className="p-2" key={column.label}>{column.render(item)}</td>
+                <td className="p-2 align-middle text-center" key={column.label}>{column.render(item)}</td>
             )
         );
         return (
