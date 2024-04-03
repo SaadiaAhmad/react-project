@@ -10,6 +10,7 @@ import MultiComponents from './components/MultiComponents/MultiComponents';
 import Route from './components/Route/Route';
 import Sidebar from './components/Sidebar/Sidebar';
 import TableConatiner from './components/TableContainer/TableContainer';
+import Counter from './components/Counter/Counter';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route path="/table">
           <TableConatiner></TableConatiner>
+        </Route>
+        <Route path="/counter">
+          <Counter></Counter>
         </Route>
       </div>
     </div>
