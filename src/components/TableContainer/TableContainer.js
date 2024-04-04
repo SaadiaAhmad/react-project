@@ -1,4 +1,5 @@
 import SortableTable from "./SortableTable/SortableTable";
+import Table from "./Table/Table";
 
 function TableConatiner() {
     const tableData = [
@@ -49,7 +50,17 @@ function TableConatiner() {
       const keyFn = (fruit) => fruit.name;
 
     return (
-        <SortableTable data={tableData} config={tableConfig} keyFn={keyFn}></SortableTable>
+        <div>
+            <section className='hero is-primary'>
+                <div className='hero-body'>
+                <p className='title'>Table Conatiner</p>
+                </div>
+            </section>
+
+            <SortableTable data={tableData} config={tableConfig} keyFn={keyFn}></SortableTable>
+
+            <Table data={tableData} config={tableConfig} keyFn={keyFn}></Table>
+        </div>
     )
 }
 
