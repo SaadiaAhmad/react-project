@@ -8,15 +8,22 @@ function Playlists() {
       };
 
     return (
-        <div className="container is-fluid">
-            <button onClick={() => handleResetClick()} className="button is-danger">
-                Reset Both Playlists
-            </button>
-            <hr />
-            <MoviePlaylist />
-            <hr />
-            <SongPlaylist />
-      </div>
+        <div>
+            <section className='hero is-primary'>
+                <div className='hero-body'>
+                <p className='title'>Counter</p>
+                </div>
+            </section>
+            <div className="container is-fluid m-5">
+                <button onClick={() => handleResetClick()} className="button is-danger">
+                    Reset Both Playlists
+                </button>
+                <hr />
+                <MoviePlaylist />
+                <hr />
+                <SongPlaylist />
+            </div>
+        </div>
     )
 }
 

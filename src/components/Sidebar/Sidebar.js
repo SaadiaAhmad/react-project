@@ -34,6 +34,10 @@ function Sidebar() {
         {
             label: 'Counter',
             path: '/counter'
+        },
+        {
+            label: 'Playlists',
+            path: '/playlists'
         }
     ];
 
