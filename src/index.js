@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { NavigationProvider } from './context/navigation';
+import './store';
 
 // 2. Get a reference to the div with Id root
 const el = document.getElementById('root');
