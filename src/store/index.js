@@ -28,3 +28,4 @@ store.dispatch(songsSlice.actions.addSong('Some song'));
 console.log(store.getState());
 
 export { store };
+export const { addSong } = songsSlice.actions;
