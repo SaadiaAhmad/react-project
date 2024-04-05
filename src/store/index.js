@@ -23,9 +23,8 @@ console.log('Store:', store);
 console.log('Starting state:', store.getState());
 
 
-store.dispatch({
-    type: 'song/addSong',
-    payload: 'New Song'
-});
+store.dispatch(songsSlice.actions.addSong('Some song'));
 
 console.log(store.getState());
+
+export { store };
