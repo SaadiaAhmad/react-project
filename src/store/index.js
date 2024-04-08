@@ -8,7 +8,8 @@ const songsSlice = createSlice({
             state.push(action.payload);
         },
         removeSong(state, action) {
-            //
+            const index = state.indexOf(action.payload);
+            state.splice(index, 1);
         }
     }
 });
@@ -19,13 +20,13 @@ const store = configureStore({
     }
 });
 
-console.log('Store:', store);
-console.log('Starting state:', store.getState());
+// console.log('Store:', store);
+// console.log('Starting state:', store.getState());
 
 
-store.dispatch(songsSlice.actions.addSong('Some song'));
+// store.dispatch(songsSlice.actions.addSong('Some song'));
 
-console.log(store.getState());
+// console.log(store.getState());
 
 export { store };
-export const { addSong } = songsSlice.actions;
+export const { addSong, removeSong } = songsSlice.actions;
