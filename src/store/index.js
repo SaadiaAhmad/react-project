@@ -1,66 +1,12 @@
-import { createSlice, configureStore, createAction } from '@reduxjs/toolkit';
-
-export const reset = createAction('playlists/reset');
-
-const songsSlice = createSlice({
-    name:'song',
-    initialState: [],
-    reducers: {
-        addSong(state, action) {
-            state.push(action.payload);
-        },
-        removeSong(state, action) {
-            const index = state.indexOf(action.payload);
-            state.splice(index, 1);
-        },
-        resetSongs(state, action) {
-            return [];
-        }
-    },
-    extraReducers(builder) {
-        builder.addCase(reset, (state,action) => {
-            return [];
-        })
-    }
-});
-
-const moviesSlice = createSlice({
-    name: 'movie',
-    initialState: [],
-    reducers: {
-        addMovie(state, action) {
-            state.push(action.payload)
-        },
-        removeMovie(state, action) {
-            const index = state.indexOf(action.payload);
-            state.splice(index, 1);
-        },
-        resetMovies(state, action) {
-            return [];
-        }
-    },
-    extraReducers(builder) {
-        builder.addCase(reset, (state,action) => {
-            return [];
-        })
-    }
-})
+import { configureStore } from '@reduxjs/toolkit';
+import { addSong, removeSong, resetSongs, songsReducer } from './slices/songsSlice';
+import { addMovie, moviesReducer, removeMovie, resetMovies } from './slices/moviesSlice';
 
 const store = configureStore({
     reducer: {
-        songs: songsSlice.reducer,
-        movies: moviesSlice.reducer
+        songs: songsReducer,
+        movies: moviesReducer
     }
 });
 
-// console.log('Store:', store);
-// console.log('Starting state:', store.getState());
-
-
-// store.dispatch(songsSlice.actions.addSong('Some song'));
-
-// console.log(store.getState());
-
-export { store };
-export const { addSong, removeSong, resetSongs } = songsSlice.actions;
-export const { addMovie, removeMovie, resetMovies } = moviesSlice.actions;
+export { store, addSong, removeSong, resetSongs, addMovie, removeMovie, resetMovies };
