@@ -5,7 +5,7 @@ import { faker } from "@faker-js/faker/locale/en";
 // movies and song
 
 export const createRandomMovie = () => {
-  return `${faker.word.adjective()} ${faker.word.noun()}`;
+  return `${faker.person.firstName()}'s ${faker.word.adjective()} ${faker.word.noun()}`;
 };
 
 export const createRandomSong = () => {
