@@ -1,21 +1,21 @@
 .animal-tile {
-    display: inline-flex;
-    position: relative;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    box-shadow: 0px 3px 4px lightgray;
-    margin: 10px;
+  display: inline-flex;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0px 3px 4px lightgray;
+  margin: 10px;
 
-    .animal {
-        display: block;
-        padding: 10px;
-    }
+  .animal {
+    display: block;
+    padding: 10px;
+  }
 
-    .heart {
-        position: absolute;
-        bottom: 10%;
-        right: 10%;
-        max-height: 150px;
-        max-width: 150px;
-    }
+  .heart {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    max-height: 150px;
+    max-width: 150px;
+  }
 }

@@ -1,12 +1,12 @@
 .app-container {
-    display: flex;
+  display: flex;
 }
 
 .main-content {
-    width: 79%;
-    height: 100vh;
+  width: 79%;
+  height: 100vh;
 }
 
 .body {
-    padding: 20px;
+  padding: 20px;
 }

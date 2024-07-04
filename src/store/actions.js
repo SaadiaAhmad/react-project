@@ -1,5 +1,3 @@
-import { createAction } from '@reduxjs/toolkit';
+import { createAction } from "@reduxjs/toolkit";
 
-
-export const reset = createAction('playlists/reset');
-
+export const reset = createAction("playlists/reset");

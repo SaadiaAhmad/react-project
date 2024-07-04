@@ -1,11 +1,11 @@
 import UseNavigation from "../../hooks/use-navigation";
 
 function Route({ path, children }) {
-    const { currentPath } = UseNavigation();
+  const { currentPath } = UseNavigation();
 
-    if(path === currentPath) return children;
+  if (path === currentPath) return children;
 
-    return null;
+  return null;
 }
 
 export default Route;
