@@ -1,5 +1,6 @@
-th, td {
-    text-align: center;
-    vertical-align: middle;
-    min-width: 70px;
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 70px;
 }

@@ -1,6 +1,6 @@
 .image-list {
-    /* display: inline-flex;
+  /* display: inline-flex;
     flex-wrap: wrap; */
-    columns: 5 350px;
-    column-gap: 8px;
+  columns: 5 350px;
+  column-gap: 8px;
 }

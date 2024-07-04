@@ -1,18 +1,18 @@
 .book-edit {
-    button {
-        color: white;
-        background-color: lightseagreen;
-        border: 1px solid green;
-        border-radius: 5px;
-        font-size: 14px;
-        width: 75px;
-        height: 25px;
-        cursor: pointer;
-    }
+  button {
+    color: white;
+    background-color: lightseagreen;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 75px;
+    height: 25px;
+    cursor: pointer;
+  }
 
-    form input {
-        width: auto;
-        height: 30px;
-        border: 1px solid darkgrey;
-    }
+  form input {
+    width: auto;
+    height: 30px;
+    border: 1px solid darkgrey;
+  }
 }

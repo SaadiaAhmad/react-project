@@ -1,5 +1,5 @@
 .book-list-container {
-    display: flex;
-    padding: 12px;
-    flex-wrap: wrap;
+  display: flex;
+  padding: 12px;
+  flex-wrap: wrap;
 }

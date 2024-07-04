@@ -3,8 +3,8 @@ import { createRandomSong } from "../../../data/playlists";
 import { addSong, removeSong } from "../../../store";
 
 function SongPlaylist() {
-    const dispatch = useDispatch();
-    const songPlaylist = useSelector((state) => state.songs);
+  const dispatch = useDispatch();
+  const songPlaylist = useSelector((state) => state.songs);
 
   const handleSongAdd = (song) => {
     const action = addSong(song);
@@ -17,12 +17,21 @@ function SongPlaylist() {
 
   const renderedSongs = songPlaylist.map((song) => {
     return (
-      <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid black', padding: '12px' }} key={song}>
+      <li
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          borderBottom: "1px solid black",
+          padding: "12px",
+        }}
+        key={song}
+      >
         {song}
         <button
           onClick={() => handleSongRemove(song)}
           className="button is-danger"
-          style={{marginRight: '40px'}}
+          style={{ marginRight: "40px" }}
         >
           X
         </button>

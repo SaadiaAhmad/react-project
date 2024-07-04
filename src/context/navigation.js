@@ -3,33 +3,31 @@ import { createContext, useEffect, useState } from "react";
 const NavigationContext = createContext();
 
 function NavigationProvider({ children }) {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
-    // Handling Forward and Back browser buttons with useEffect
-    useEffect(() => {
-        const handler = () => {
-            setCurrentPath(window.location.pathname);
-        };
-        window.addEventListener('popstate', handler);
+  // Handling Forward and Back browser buttons with useEffect
+  useEffect(() => {
+    const handler = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener("popstate", handler);
 
-        return () => {
-            window.removeEventListener('popstate', handler);
-        }
-    }, [])
+    return () => {
+      window.removeEventListener("popstate", handler);
+    };
+  }, []);
 
-    const navigate = (to) => {
-        window.history.pushState({}, '', to);
-        setCurrentPath(to);
-    }
+  const navigate = (to) => {
+    window.history.pushState({}, "", to);
+    setCurrentPath(to);
+  };
 
-    return (
-        <NavigationContext.Provider value={{ currentPath, navigate }}>
-            { children }
-        </NavigationContext.Provider>
-    )
-
+  return (
+    <NavigationContext.Provider value={{ currentPath, navigate }}>
+      {children}
+    </NavigationContext.Provider>
+  );
 }
-
 
 export { NavigationProvider };
 export default NavigationContext;

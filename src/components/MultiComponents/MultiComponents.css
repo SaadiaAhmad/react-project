@@ -1,30 +1,30 @@
 .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .flex-child {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 0 4px lightgray;
+    margin: 16px;
+    padding: 8px;
+    min-width: 300px;
+  }
 
-    .flex-child {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid grey;
-        border-radius: 5px;
-        box-shadow: 0 0 4px lightgray;
-        margin: 16px;
-        padding: 8px;
-        min-width: 300px;
-    }
+  .child-title {
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 0 4px lightgray;
+    margin: 12px;
+  }
 
-    .child-title {
-        text-align: center;
-        font-weight: 600;
-        border: 1px solid grey;
-        border-radius: 5px;
-        box-shadow: 0 0 4px lightgray;
-        margin: 12px;
-    }
-
-    .modal-div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+  .modal-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }

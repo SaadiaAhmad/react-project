@@ -1,17 +1,17 @@
 .side-navigation {
-    display: flex;
-    flex-direction: column;
-    width: 21%;
-    height: 100vh;
-    border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  width: 21%;
+  height: 100vh;
+  border: 1px solid grey;
 
-    /* position: sticky;
+  /* position: sticky;
     top: 0;
     overflow-y: scroll; */
 
-    a {
-        padding: 8px;
-        border: 1px solid grey;
-        margin: 2px;
-    }
+  a {
+    padding: 8px;
+    border: 1px solid grey;
+    margin: 2px;
+  }
 }

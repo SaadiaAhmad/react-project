@@ -3,8 +3,8 @@ import { createRandomMovie } from "../../../data/playlists";
 import { addMovie, removeMovie } from "../../../store";
 
 function MoviePlaylist() {
-    const dispatch = useDispatch();
-    const moviePlaylist = useSelector((state) => state.movies);
+  const dispatch = useDispatch();
+  const moviePlaylist = useSelector((state) => state.movies);
 
   const handleMovieAdd = (movie) => {
     const action = addMovie(movie);
@@ -17,12 +17,21 @@ function MoviePlaylist() {
 
   const renderedMovies = moviePlaylist.map((movie) => {
     return (
-      <li key={movie} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid black', padding: '12px' }}>
+      <li
+        key={movie}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          borderBottom: "1px solid black",
+          padding: "12px",
+        }}
+      >
         {movie}
         <button
           onClick={() => handleMovieRemove(movie)}
           className="button is-danger"
-          style={{marginRight: '40px'}}
+          style={{ marginRight: "40px" }}
         >
           X
         </button>
