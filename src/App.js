@@ -21,10 +21,13 @@ function App() {
       <div className='main-content'>
         <Route path="/">
           <section className='hero is-primary'>
-              <div className='hero-body'>
-                <p className='title'>Welcome to My React App</p>
-              </div>
-            </section>
+            <div className='hero-body'>
+              <p className='title'>Welcome to My React App</p>
+            </div>
+          </section>
+          <div>
+            <p className='body'>This is a react app that uses a variety of react concepts for each component you see on the left.</p>
+          </div>
         </Route>
         <Route path="/personal-digital-assistant">
           <PersonalDigitalAssistant></PersonalDigitalAssistant>
